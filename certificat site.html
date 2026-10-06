@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maquette de projet informatique — page de démonstration">
+  <title>Vérification de certificat</title>
+
+  <style>
+    :root {
+      --navy: #092a47;
+      --blue: #287cba;
+      --blue-hover: #226da5;
+      --green: #18a968;
+      --mint: #a8e8cb;
+      --bg: #f7f8fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--navy);
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 960px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 46px 54px 70px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(43px, 7vw, 68px);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -1.8px;
+    }
+
+    .illustration {
+      position: relative;
+      width: 238px;
+      height: 238px;
+      margin: 104px auto 52px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    /* Forme verte de fond */
+    .illustration::before {
+      content: "";
+      position: absolute;
+      width: 151px;
+      height: 207px;
+      left: 25px;
+      top: 16px;
+      background: var(--mint);
+      border-radius: 68% 42% 59% 49%;
+      transform: rotate(-8deg);
+    }
+
+    /* Coche */
+    .tick {
+      position: absolute;
+      z-index: 2;
+      width: 108px;
+      height: 61px;
+      left: 64px;
+      top: 77px;
+      border-left: 28px solid var(--green);
+      border-bottom: 28px solid var(--green);
+      border-radius: 9px;
+      transform: rotate(-45deg);
+    }
+
+    .message {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(28px, 4.15vw, 43px);
+      line-height: 1.27;
+      font-weight: 400;
+      letter-spacing: -0.4px;
+    }
+
+    .message strong {
+      font-weight: 700;
+    }
+
+    .notice {
+      display: inline-block;
+      margin-top: 78px;
+      margin-bottom: 25px;
+      padding: 8px 13px;
+      border: 1px solid #c9d2db;
+      border-radius: 5px;
+      background: #fff;
+      color: #687887;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .quit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 118px;
+      width: 100%;
+      padding: 25px 20px;
+      border-radius: 15px;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(30px, 4vw, 39px);
+      font-weight: 700;
+      box-shadow: 0 3px 7px rgba(0,0,0,.18);
+      transition: background .15s ease, transform .1s ease;
+    }
+
+    .quit:hover {
+      background: var(--blue-hover);
+    }
+
+    .quit:active {
+      transform: translateY(1px);
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--blue);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 30px 22px 55px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .illustration {
+        width: 190px;
+        height: 190px;
+        margin-top: 74px;
+        margin-bottom: 42px;
+      }
+
+      .illustration::before {
+        width: 121px;
+        height: 165px;
+        left: 20px;
+        top: 13px;
+      }
+
+      .tick {
+        width: 86px;
+        height: 49px;
+        left: 51px;
+        top: 62px;
+        border-width: 23px;
+      }
+
+      .notice {
+        margin-top: 52px;
+      }
+
+      .quit {
+        min-height: 88px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <h1>Vérification de certificat</h1>
+
+    <div class="illustration" aria-hidden="true">
+      <span class="tick"></span>
+    </div>
+
+    <section class="message" aria-label="Résultat de la démonstration">
+      <br>
+      Certificat rédigé le 06/10/2026 par le
+      docteur DERRADJI Youssef au patient
+      dont les initiales sont K.M, né(e) le
+      19/01/2008<br>
+    </section>
+    <a
+      class="quit"
+      href="https://app.medadom.com/login/new"
+      rel="noopener noreferrer"
+    >
+      Quitter
+    </a>
+
+  </main>
+</body>
+</html>
